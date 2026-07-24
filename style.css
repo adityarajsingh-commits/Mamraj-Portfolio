@@ -1207,3 +1207,104 @@ body.dark #theme-toggle{
     color:#FFD700;
 
 }
+/* ===================================
+   LOADER
+=================================== */
+
+#loader{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100vh;
+
+    background:#F8F3EE;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+    transition:.6s;
+
+}
+
+.spinner{
+
+    width:70px;
+
+    height:70px;
+
+    border:6px solid #ddd;
+
+    border-top:6px solid var(--primary);
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+    margin-bottom:20px;
+
+}
+
+@keyframes spin{
+
+    100%{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+#loader h2{
+
+    color:var(--primary);
+
+    font-size:30px;
+
+    letter-spacing:2px;
+
+}
+
+/* Hide Loader */
+
+.loader-hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+/* ===================================
+   SCROLL REVEAL
+=================================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1s;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
