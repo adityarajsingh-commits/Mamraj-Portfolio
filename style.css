@@ -1083,3 +1083,127 @@ display:flex;
 }
 
 }
+/* ===============================
+   DARK MODE BUTTON
+================================ */
+
+#theme-toggle{
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--cream);
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    transition:.3s;
+
+    margin-right:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+#theme-toggle:hover{
+
+    transform:rotate(180deg);
+
+}
+
+/* ===============================
+   DARK MODE
+================================ */
+
+body.dark{
+
+    background:#121212;
+
+    color:#ffffff;
+
+}
+
+body.dark nav{
+
+    background:#1b1b1b;
+
+}
+
+body.dark .about,
+body.dark .services,
+body.dark .pricing,
+body.dark .contact,
+body.dark footer{
+
+    background:#1b1b1b;
+
+}
+
+body.dark .portfolio,
+body.dark .faq,
+body.dark .stats,
+body.dark .testimonials{
+
+    background:#151515;
+
+}
+
+body.dark .service-card,
+body.dark .portfolio-card,
+body.dark .price-card,
+body.dark .testimonial-card,
+body.dark .faq-item,
+body.dark .stat-box{
+
+    background:#252525;
+
+    color:#ffffff;
+
+}
+
+body.dark p{
+
+    color:#d5d5d5;
+
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5{
+
+    color:#ffffff;
+
+}
+
+body.dark input,
+body.dark textarea{
+
+    background:#2a2a2a;
+
+    color:#ffffff;
+
+    border:1px solid #444;
+
+}
+
+body.dark nav ul li a{
+
+    color:#ffffff;
+
+}
+
+body.dark #theme-toggle{
+
+    background:#333;
+
+    color:#FFD700;
+
+}
