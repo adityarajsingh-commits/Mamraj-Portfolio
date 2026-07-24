@@ -4,69 +4,70 @@
 
 const themeBtn = document.getElementById("theme-toggle");
 
-// Saved Theme Load
-if(localStorage.getItem("theme") === "dark"){
+if (themeBtn) {
 
-    document.body.classList.add("dark");
+    // Load Saved Theme
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark");
+        themeBtn.innerHTML = "☀️";
+    } else {
+        themeBtn.innerHTML = "🌙";
+    }
 
-    themeBtn.innerHTML = "☀️";
+    // Toggle Theme
+    themeBtn.addEventListener("click", () => {
+
+        document.body.classList.toggle("dark");
+
+        if (document.body.classList.contains("dark")) {
+
+            localStorage.setItem("theme", "dark");
+            themeBtn.innerHTML = "☀️";
+
+        } else {
+
+            localStorage.setItem("theme", "light");
+            themeBtn.innerHTML = "🌙";
+
+        }
+
+    });
 
 }
 
-// Toggle Theme
 
-themeBtn.addEventListener("click",()=>{
-
-    document.body.classList.toggle("dark");
-
-    if(document.body.classList.contains("dark")){
-
-        localStorage.setItem("theme","dark");
-
-        themeBtn.innerHTML="☀️";
-
-    }
-
-    else{
-
-        localStorage.setItem("theme","light");
-
-        themeBtn.innerHTML="🌙";
-
-    }
-
-});
-
-/* ===================================
+/* ===============================
    LOADER
-=================================== */
+================================ */
 
-window.addEventListener("load",()=>{
+window.addEventListener("load", () => {
 
     const loader = document.getElementById("loader");
 
-    loader.classList.add("loader-hide");
+    if(loader){
+
+        loader.classList.add("loader-hide");
+
+    }
 
 });
 
 
-/* ===================================
+/* ===============================
    SCROLL REVEAL
-=================================== */
+================================ */
 
 const reveals = document.querySelectorAll(".reveal");
 
-function revealSection(){
+function revealSection() {
 
-    reveals.forEach(section=>{
+    reveals.forEach(section => {
 
         const windowHeight = window.innerHeight;
 
         const top = section.getBoundingClientRect().top;
 
-        const visible = 120;
-
-        if(top < windowHeight - visible){
+        if (top < windowHeight - 120) {
 
             section.classList.add("active");
 
@@ -76,70 +77,74 @@ function revealSection(){
 
 }
 
-window.addEventListener("scroll",revealSection);
+window.addEventListener("scroll", revealSection);
 
 revealSection();
 
-/*=========================
-Statistics Counter
-=========================*/
+
+/* ===============================
+   STATISTICS COUNTER
+================================ */
 
 const counters = document.querySelectorAll(".counter");
-
 const statsSection = document.querySelector(".stats");
 
 let started = false;
 
-window.addEventListener("scroll", () => {
+if (statsSection) {
 
-    const sectionTop = statsSection.offsetTop - 400;
+    window.addEventListener("scroll", () => {
 
-    if (window.scrollY >= sectionTop && !started) {
+        const sectionTop = statsSection.offsetTop - 400;
 
-        counters.forEach(counter => {
+        if (window.scrollY >= sectionTop && !started) {
 
-            const target = +counter.dataset.target;
+            counters.forEach(counter => {
 
-            let count = 0;
+                const target = Number(counter.dataset.target);
 
-            const increment = target / 80;
+                let count = 0;
 
-            const update = () => {
+                const increment = target / 80;
 
-                count += increment;
+                function updateCounter() {
 
-                if (count < target) {
+                    count += increment;
 
-                    counter.innerText = Math.ceil(count);
+                    if (count < target) {
 
-                    requestAnimationFrame(update);
+                        counter.innerText = Math.ceil(count);
 
-                } else {
+                        requestAnimationFrame(updateCounter);
 
-                    if(target === 99){
+                    } else {
 
-                        counter.innerText = "99%";
+                        if (target === 99) {
 
-                    }else if(target === 24){
+                            counter.innerText = "99%";
 
-                        counter.innerText = "24/7";
+                        } else if (target === 24) {
 
-                    }else{
+                            counter.innerText = "24/7";
 
-                        counter.innerText = target + "+";
+                        } else {
+
+                            counter.innerText = target + "+";
+
+                        }
 
                     }
 
                 }
 
-            };
+                updateCounter();
 
-            update();
+            });
 
-        });
+            started = true;
 
-        started = true;
+        }
 
-    }
+    });
 
-});
+}
