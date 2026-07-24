@@ -1486,4 +1486,80 @@ transform:none;
 }
 
 }
+/*=========================
+STATISTICS
+=========================*/
 
+.stats{
+
+padding:100px 0;
+
+background:linear-gradient(135deg,#1E2A5A,#24366E);
+
+}
+
+.stats-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:30px;
+
+}
+
+.stat-card{
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+border:1px solid rgba(255,255,255,.15);
+
+padding:40px 25px;
+
+border-radius:20px;
+
+text-align:center;
+
+transition:.4s;
+
+}
+
+.stat-card:hover{
+
+transform:translateY(-12px);
+
+background:rgba(255,255,255,.15);
+
+}
+
+.stat-icon{
+
+font-size:45px;
+
+margin-bottom:20px;
+
+}
+
+.stat-card h2{
+
+font-size:55px;
+
+color:#C58B73;
+
+font-weight:700;
+
+margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+font-size:18px;
+
+color:#ffffff;
+
+font-weight:500;
+
+}
