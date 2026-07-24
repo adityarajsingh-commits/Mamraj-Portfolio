@@ -36,3 +36,46 @@ themeBtn.addEventListener("click",()=>{
     }
 
 });
+
+/* ===================================
+   LOADER
+=================================== */
+
+window.addEventListener("load",()=>{
+
+    const loader = document.getElementById("loader");
+
+    loader.classList.add("loader-hide");
+
+});
+
+
+/* ===================================
+   SCROLL REVEAL
+=================================== */
+
+const reveals = document.querySelectorAll(".reveal");
+
+function revealSection(){
+
+    reveals.forEach(section=>{
+
+        const windowHeight = window.innerHeight;
+
+        const top = section.getBoundingClientRect().top;
+
+        const visible = 120;
+
+        if(top < windowHeight - visible){
+
+            section.classList.add("active");
+
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll",revealSection);
+
+revealSection();
