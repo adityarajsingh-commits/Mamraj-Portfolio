@@ -227,14 +227,10 @@ themeBtn.innerHTML="🌙";
 
 /* Sticky Navbar */
 
-nav.sticky{
-
-background:#ffffff;
-
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-transition:.3s;
-
+nav. sticky{
+    background:#ffffff;
+    box-shadow:0 10px 30px rgba(0,0,0,.08); 
+    transition:.3s;
 }
 
 /* Mobile Menu */
