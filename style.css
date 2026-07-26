@@ -2709,3 +2709,531 @@ body.dark .pricing-features li i{
     -webkit-backdrop-filter:blur(14px);
     border:1px solid rgba(255,255,255,.25);
 }
+/*====================================
+        TESTIMONIALS SECTION
+====================================*/
+
+.testimonials{
+    position:relative;
+    background:#ffffff;
+    overflow:hidden;
+}
+
+.testimonial-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+
+/*====================================
+        TESTIMONIAL CARD
+====================================*/
+
+.testimonial-card{
+    position:relative;
+    background:#ffffff;
+    border-radius:24px;
+    padding:35px;
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
+    transition:.4s ease;
+    overflow:hidden;
+}
+
+.testimonial-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 30px 60px rgba(0,0,0,.12);
+}
+
+.testimonial-card::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:5px;
+    background:var(--secondary);
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:.4s;
+}
+
+.testimonial-card:hover::before{
+    transform:scaleX(1);
+}
+
+/*====================================
+         QUOTE ICON
+====================================*/
+
+.quote-icon{
+    width:70px;
+    height:70px;
+    border-radius:18px;
+    background:rgba(197,139,115,.12);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:25px;
+}
+
+.quote-icon i{
+    font-size:30px;
+    color:var(--secondary);
+}
+
+.testimonial-card p{
+    color:var(--gray);
+    font-size:16px;
+    line-height:1.9;
+    margin-bottom:28px;
+}
+
+/*====================================
+          STAR RATING
+====================================*/
+
+.rating{
+    display:flex;
+    gap:6px;
+    margin-bottom:25px;
+}
+
+.rating i{
+    color:#FFC107;
+    font-size:18px;
+}
+
+/*====================================
+        CLIENT PROFILE
+====================================*/
+
+.client-info{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-top:10px;
+}
+
+.client-info img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid rgba(197,139,115,.18);
+}
+
+.client-details h4{
+    color:var(--primary);
+    font-size:20px;
+    margin-bottom:4px;
+}
+
+.client-details span{
+    color:var(--gray);
+    font-size:15px;
+}
+
+/*====================================
+      HOVER GLOW EFFECT
+====================================*/
+
+.testimonial-card::after{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:rgba(197,139,115,.08);
+    top:-110px;
+    right:-110px;
+    transition:.45s ease;
+}
+
+.testimonial-card:hover::after{
+    transform:scale(1.6);
+}
+
+.testimonial-card>*{
+    position:relative;
+    z-index:2;
+}
+
+/*====================================
+      RESPONSIVE TESTIMONIALS
+====================================*/
+
+@media(max-width:992px){
+
+.testimonial-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.testimonial-grid{
+    grid-template-columns:1fr;
+}
+
+.testimonial-card{
+    padding:30px 25px;
+}
+
+.client-info img{
+    width:60px;
+    height:60px;
+}
+
+.client-details h4{
+    font-size:18px;
+}
+
+}
+
+/*====================================
+          DARK MODE
+====================================*/
+
+body.dark .testimonials{
+    background:#181818;
+}
+
+body.dark .testimonial-card{
+    background:#232323;
+}
+
+body.dark .testimonial-card p,
+body.dark .client-details span{
+    color:#d0d0d0;
+}
+
+body.dark .client-details h4{
+    color:#ffffff;
+}
+
+body.dark .quote-icon{
+    background:rgba(255,255,255,.08);
+}
+
+/*====================================
+      GLASS TESTIMONIAL CARD
+====================================*/
+
+.testimonial-card.glass{
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,.25);
+}
+/*====================================
+            FAQ SECTION
+====================================*/
+
+.faq{
+    position:relative;
+    background:#F8F3EE;
+    overflow:hidden;
+}
+
+.faq-wrapper{
+    max-width:900px;
+    margin:60px auto 0;
+}
+
+/*====================================
+            FAQ ITEM
+====================================*/
+
+.faq-item{
+    background:#ffffff;
+    border-radius:18px;
+    margin-bottom:20px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:.35s ease;
+}
+
+.faq-item:hover{
+    transform:translateY(-4px);
+    box-shadow:0 25px 50px rgba(0,0,0,.10);
+}
+
+/*====================================
+          FAQ QUESTION
+====================================*/
+
+.faq-question{
+    width:100%;
+    background:none;
+    border:none;
+    outline:none;
+    cursor:pointer;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:24px 30px;
+
+    font-size:18px;
+    font-weight:600;
+    color:var(--primary);
+    text-align:left;
+}
+
+.faq-question i{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:rgba(197,139,115,.12);
+    color:var(--secondary);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:.35s ease;
+}
+
+/*====================================
+           ACTIVE STATE
+====================================*/
+
+.faq-item.active .faq-question i{
+    transform:rotate(45deg);
+    background:var(--secondary);
+    color:#ffffff;
+}
+
+/*====================================
+            FAQ ANSWER
+====================================*/
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .45s ease;
+}
+
+.faq-answer p{
+    padding:0 30px 28px;
+    color:var(--gray);
+    line-height:1.9;
+    font-size:16px;
+}
+/*====================================
+      FAQ HOVER GLOW EFFECT
+====================================*/
+
+.faq-item::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        135deg,
+        rgba(197,139,115,.12),
+        transparent 70%
+    );
+    opacity:0;
+    transition:.35s ease;
+    pointer-events:none;
+}
+
+.faq-item:hover::before{
+    opacity:1;
+}
+
+.faq-item{
+    position:relative;
+}
+
+.faq-item>*{
+    position:relative;
+    z-index:2;
+}
+
+/*====================================
+      SMOOTH ACCORDION EFFECT
+====================================*/
+
+.faq-item.active{
+    border-left:5px solid var(--secondary);
+}
+
+.faq-item.active .faq-question{
+    color:var(--secondary);
+}
+
+.faq-item.active .faq-answer{
+    animation:fadeAnswer .35s ease;
+}
+
+@keyframes fadeAnswer{
+
+    from{
+        opacity:0;
+        transform:translateY(-8px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/*====================================
+        RESPONSIVE FAQ
+====================================*/
+
+@media(max-width:768px){
+
+.faq-wrapper{
+    margin-top:45px;
+}
+
+.faq-question{
+    padding:20px;
+    font-size:16px;
+}
+
+.faq-question i{
+    width:38px;
+    height:38px;
+    font-size:14px;
+}
+
+.faq-answer p{
+    padding:0 20px 22px;
+    font-size:15px;
+}
+
+}
+
+/*====================================
+          DARK MODE
+====================================*/
+
+body.dark .faq{
+    background:#161616;
+}
+
+body.dark .faq-item{
+    background:#232323;
+}
+
+body.dark .faq-question{
+    color:#ffffff;
+}
+
+body.dark .faq-answer p{
+    color:#d0d0d0;
+}
+
+body.dark .faq-question i{
+    background:rgba(255,255,255,.08);
+}
+
+body.dark .faq-item.active .faq-question{
+    color:var(--secondary);
+}
+
+/*====================================
+        GLASS FAQ CARD
+====================================*/
+
+.faq-item.glass{
+    background:rgba(255,255,255,.72);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border:1px solid rgba(255,255,255,.25);
+}
+/*====================================
+          CONTACT SECTION
+====================================*/
+
+.contact{
+    position:relative;
+    background:#ffffff;
+    overflow:hidden;
+}
+
+.contact-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:50px;
+    margin-top:60px;
+}
+
+/*====================================
+      CONTACT INFORMATION
+====================================*/
+
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.contact-card{
+    display:flex;
+    align-items:flex-start;
+    gap:18px;
+    background:#ffffff;
+    border-radius:22px;
+    padding:28px;
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
+    transition:.35s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+.contact-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+}
+
+/*====================================
+          CONTACT ICON
+====================================*/
+
+.contact-icon{
+    width:65px;
+    height:65px;
+    border-radius:18px;
+    background:rgba(197,139,115,.12);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+}
+
+.contact-icon i{
+    font-size:26px;
+    color:var(--secondary);
+}
+
+/*====================================
+         CONTACT DETAILS
+====================================*/
+
+.contact-details h3{
+    color:var(--primary);
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.contact-details p,
+.contact-details a{
+    color:var(--gray);
+    font-size:16px;
+    line-height:1.8;
+    text-decoration:none;
+    transition:.3s ease;
+}
+
+.contact-details a:hover{
+    color:var(--secondary);
+}
