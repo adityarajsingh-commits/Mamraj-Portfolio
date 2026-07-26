@@ -2865,3 +2865,616 @@ ul{
     justify-content:center;
 
 }
+/*=========================================
+        PRICING EXTRA
+=========================================*/
+
+/* Toggle */
+
+.pricing-toggle{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin:40px 0;
+
+}
+
+.toggle-box{
+
+    background:#fff;
+
+    padding:8px;
+
+    border-radius:999px;
+
+    box-shadow:var(--shadow-sm);
+
+    display:flex;
+
+}
+
+.toggle-box button{
+
+    border:none;
+
+    background:none;
+
+    padding:12px 25px;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+.toggle-box button.active{
+
+    background:var(--gradient);
+
+    color:#fff;
+
+}
+
+/* Comparison */
+
+.comparison-table{
+
+    width:100%;
+
+    margin-top:80px;
+
+    border-collapse:collapse;
+
+    background:#fff;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.comparison-table th{
+
+    background:var(--gradient);
+
+    color:#fff;
+
+    padding:22px;
+
+}
+
+.comparison-table td{
+
+    padding:20px;
+
+    text-align:center;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.comparison-table tr:hover{
+
+    background:#f8fafc;
+
+}
+
+/* Offer */
+
+.offer-banner{
+
+    margin-top:80px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+
+    padding:55px;
+
+    border-radius:30px;
+
+    background:var(--gradient2);
+
+    color:#fff;
+
+}
+
+.offer-banner h2{
+
+    color:#fff;
+
+}
+
+.offer-banner p{
+
+    color:rgba(255,255,255,.92);
+
+}
+        /*=========================================
+            TESTIMONIALS
+=========================================*/
+
+.testimonials{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.testimonials::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    background:rgba(79,70,229,.05);
+
+    border-radius:50%;
+
+    filter:blur(180px);
+
+    right:-250px;
+
+    bottom:-250px;
+
+    z-index:-1;
+
+}
+
+/* Grid */
+
+.testimonial-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+/* Card */
+
+.testimonial-card{
+
+    position:relative;
+
+    background:#fff;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s;
+
+}
+
+.testimonial-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+/* Quote */
+
+.quote-icon{
+
+    width:60px;
+
+    height:60px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:18px;
+
+    background:var(--gradient);
+
+    color:#fff;
+
+    font-size:1.4rem;
+
+    margin-bottom:25px;
+
+}
+
+/* Rating */
+
+.rating{
+
+    display:flex;
+
+    gap:6px;
+
+    margin:20px 0;
+
+}
+
+.rating i{
+
+    color:#FFD43B;
+
+}
+
+/* Client */
+
+.client{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-top:30px;
+
+}
+
+.client img{
+
+    width:65px;
+
+    height:65px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+}
+
+.client-info h4{
+
+    margin-bottom:4px;
+
+}
+
+.client-info span{
+
+    color:var(--gray);
+
+    font-size:.9rem;
+
+}
+        /*=========================================
+        TESTIMONIAL EXTRAS
+=========================================*/
+
+/* Logo Wall */
+
+.client-wall{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:30px;
+
+    margin:90px 0;
+
+}
+
+.client-logo{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s;
+
+}
+
+.client-logo img{
+
+    max-width:120px;
+
+    opacity:.6;
+
+    filter:grayscale(100%);
+
+    transition:.35s;
+
+}
+
+.client-logo:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.client-logo:hover img{
+
+    opacity:1;
+
+    filter:none;
+
+}
+
+/* Video Card */
+
+.video-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    margin-top:80px;
+
+}
+
+.video-card img{
+
+    border-radius:30px;
+
+}
+
+.play-btn{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    display:grid;
+
+    place-items:center;
+
+    background:rgba(255,255,255,.9);
+
+    color:var(--primary);
+
+    font-size:2rem;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.play-btn:hover{
+
+    transform:translate(-50%,-50%) scale(1.1);
+
+}
+/*=========================================
+                FAQ
+=========================================*/
+
+.faq{
+
+    position:relative;
+
+}
+
+.faq-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+}
+
+/* Search */
+
+.faq-search{
+
+    display:flex;
+
+    align-items:center;
+
+    background:#fff;
+
+    padding:16px 22px;
+
+    border-radius:18px;
+
+    margin-bottom:40px;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.faq-search input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    font-size:1rem;
+
+    background:none;
+
+    margin-left:15px;
+
+}
+
+/* Accordion */
+
+.accordion{
+
+    display:grid;
+
+    gap:18px;
+
+}
+
+.accordion-item{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.accordion-header{
+
+    padding:22px 28px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-weight:600;
+
+}
+
+.accordion-header i{
+
+    transition:.35s;
+
+}
+
+.accordion-item.active .accordion-header i{
+
+    transform:rotate(180deg);
+
+}
+
+.accordion-body{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .4s ease;
+
+}
+
+.accordion-body p{
+
+    padding:0 28px 24px;
+
+}
+        /*=========================================
+        FAQ EXTRA
+=========================================*/
+
+.knowledge-grid{
+
+    display:grid;
+
+    gap:25px;
+
+}
+
+.knowledge-card{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s;
+
+}
+
+.knowledge-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.knowledge-card i{
+
+    font-size:2rem;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.support-card{
+
+    margin-top:40px;
+
+    padding:45px;
+
+    border-radius:30px;
+
+    background:var(--gradient);
+
+    color:#fff;
+
+}
+
+.support-card h3{
+
+    color:#fff;
+
+    margin-bottom:20px;
+
+}
+
+.support-card p{
+
+    color:rgba(255,255,255,.9);
+
+    margin-bottom:30px;
+
+}
+
+.support-card .primary-btn{
+
+    background:#fff;
+
+    color:var(--primary);
+
+}
