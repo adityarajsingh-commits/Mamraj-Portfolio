@@ -225,8 +225,6 @@ themeBtn.innerHTML="🌙";
 
 });
 
-}
-
 /* Sticky Navbar */
 
 nav.sticky{
